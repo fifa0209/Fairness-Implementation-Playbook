@@ -261,5 +261,11 @@ This playbook builds on the work of researchers, practitioners, and advocates ac
 2. **Program Managers**: Study [Implementation Workflow](05_Implementation-Workflow.md) → Plan deployment
 3. **Technical Teams**: Start with [Fair AI Scrum Toolkit](01_Fair-AI-Scrum-Toolkit.md) → Apply templates
 4. **Compliance**: Map jurisdictions in [Regulatory Compliance Guide](04_Regulatory-Compliance-Guide.md) → Build evidence
+5. **Appendices**: Appendices for reference  
+   1. [Architecture Quick Reference](appendices/architecture-quick-reference.md)
+   2. [Emergency Response Playbook](appendices/emergency-response-playbook.md)
+   3. [Fairness Implementation Glossary](appendices/glossary.md)
+   4. [Regulatory Quick Reference](appendices/regulatory-quick-reference.md)
+
 
 **The work begins now. The impact will last for years.**
