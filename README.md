@@ -69,7 +69,7 @@ graph TB
 **For Technical Teams**:
 1. Begin with [Fair AI Scrum Toolkit](01_Fair-AI-Scrum-Toolkit.md)
 2. Reference [Advanced Architecture Cookbook](03_Advanced-Architecture-Cookbook.md) for your system type
-3. Use templates for immediate application
+3. Use templates for immediate implementaion
    1. [User Story](templates/fairness-user-story-template.md)
    2. [FDR Record](templates/fairness-decision-record-template.md)
    3. [RACI Matrix](templates/raci-matrix-template.md)
