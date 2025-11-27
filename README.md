@@ -1,7 +1,4 @@
 # Fairness Implementation Playbook
-Main entry point and executive summary.# Fairness Implementation Playbook
-
-**Version 1.0** | Developed by EquiHire | Last Updated: 2024
 
 ## Executive Summary
 
