@@ -515,11 +515,11 @@ portfolio = conduct_portfolio_review(ai_systems)
 - Skepticism about ROI
 
 **Solutions**:
-✓ **Reframe as risk management**: One prevented incident saves $500K-$5M  
-✓ **Show efficiency gains**: 58% faster bias resolution, 47% lower compliance costs  
-✓ **Start small**: Pilot with one high-risk system, demonstrate value  
-✓ **Regulatory pressure**: Highlight legal requirements (EU AI Act, state laws)  
-✓ **Market advantage**: Fair AI certification unlocks new markets  
+- **Reframe as risk management**: One prevented incident saves $500K-$5M  
+- **Show efficiency gains**: 58% faster bias resolution, 47% lower compliance costs  
+- **Start small**: Pilot with one high-risk system, demonstrate value  
+- **Regulatory pressure**: Highlight legal requirements (EU AI Act, state laws)  
+- **Market advantage**: Fair AI certification unlocks new markets  
 
 **Example Business Case**:
 ```
@@ -540,11 +540,11 @@ ROI: 430% over 3 years
 - Fairness work falls through cracks
 
 **Solutions**:
-✓ **RACI matrices are mandatory**: Don't proceed without them  
-✓ **One accountable person per decision**: Never "shared accountability"  
-✓ **Visible leadership**: Chief AI Ethics Officer must be known and accessible  
-✓ **Regular communication**: Weekly office hours, monthly updates  
-✓ **Escalation clarity**: Published escalation paths  
+- **RACI matrices are mandatory**: Don't proceed without them  
+- **One accountable person per decision**: Never "shared accountability"  
+- **Visible leadership**: Chief AI Ethics Officer must be known and accessible  
+- **Regular communication**: Weekly office hours, monthly updates  
+- **Escalation clarity**: Published escalation paths  
 
 ---
 
@@ -556,11 +556,11 @@ ROI: 430% over 3 years
 - Resistance to fairness processes
 
 **Solutions**:
-✓ **Automate evidence collection**: CI/CD integration, monitoring dashboards  
-✓ **Templates and examples**: Reduce creation friction  
-✓ **Show value**: "Last time, we spent 2 weeks re-litigating a decision because we didn't document it"  
-✓ **Light FDRs for minor decisions**: Full FDRs only for major decisions  
-✓ **Celebrate good documentation**: Recognize teams with excellent FDRs  
+- **Automate evidence collection**: CI/CD integration, monitoring dashboards  
+- **Templates and examples**: Reduce creation friction  
+- **Show value**: "Last time, we spent 2 weeks re-litigating a decision because we didn't document it"  
+- **Light FDRs for minor decisions**: Full FDRs only for major decisions  
+- **Celebrate good documentation**: Recognize teams with excellent FDRs  
 
 ---
 
@@ -651,17 +651,17 @@ ROI: 430% over 3 years
   **Candidate Ranking Feature DoD**:
   
   Functional:
-  □ Accuracy ≥82%
-  □ API latency <200ms
-  □ Unit tests pass
+  - Accuracy ≥82%
+  - API latency <200ms
+  - Unit tests pass
   
   Fairness:
-  □ Equal opportunity difference ≤0.03
-  □ Demographic parity difference ≤0.05
-  □ Intersectional gap ≤0.04
-  □ Counterfactual analysis completed (500 test cases)
-  □ Model card updated
-  □ FDR created (if trade-offs made)
+  - Equal opportunity difference ≤0.03
+  - Demographic parity difference ≤0.05
+  - Intersectional gap ≤0.04
+  - Counterfactual analysis completed (500 test cases)
+  - Model card updated
+  - FDR created (if trade-offs made)
 ```
 
 **Sprint Planning Checklist**:
@@ -932,11 +932,11 @@ ROI: 430% over 3 years
 - Business pressure overrides fairness
 
 **Solutions**:
-✓ **Executive reinforcement**: Chief AI Ethics Officer communicates importance  
-✓ **Start smaller**: Begin with 15% capacity, increase gradually  
-✓ **Show efficiency gains**: "We're preventing 3 sprints of rework by catching bias early"  
-✓ **Regulatory framing**: "This isn't optional, it's compliance"  
-✓ **Quick wins**: Highlight early successes from pilot  
+- **Executive reinforcement**: Chief AI Ethics Officer communicates importance  
+- **Start smaller**: Begin with 15% capacity, increase gradually  
+- **Show efficiency gains**: "We're preventing 3 sprints of rework by catching bias early"  
+- **Regulatory framing**: "This isn't optional, it's compliance"  
+- **Quick wins**: Highlight early successes from pilot  
 
 ---
 
@@ -948,11 +948,11 @@ ROI: 430% over 3 years
 - Quality of fairness implementations varies
 
 **Solutions**:
-✓ **Central CoE provides implementation support**: Tech Fairness Lead pairs with teams  
-✓ **Build reusable libraries**: Create org-wide fairness toolkit  
-✓ **Start simple**: Post-processing and reweighting before complex interventions  
-✓ **Advanced Architecture Cookbook**: Point teams to relevant sections  
-✓ **External expertise**: Bring in consultants for complex interventions  
+- **Central CoE provides implementation support**: Tech Fairness Lead pairs with teams  
+- **Build reusable libraries**: Create org-wide fairness toolkit  
+- **Start simple**: Post-processing and reweighting before complex interventions  
+- **Advanced Architecture Cookbook**: Point teams to relevant sections  
+- **External expertise**: Bring in consultants for complex interventions  
 
 ---
 
@@ -964,11 +964,11 @@ ROI: 430% over 3 years
 - Debates about "right" fairness definition
 
 **Solutions**:
-✓ **Domain-specific guidance**: CoE provides metric recommendations per domain  
-✓ **FDR for metric selection**: Document rationale once, reference repeatedly  
-✓ **Prioritize 3-5 core metrics**: Don't try to optimize everything  
-✓ **Regulatory alignment**: Use metrics mandated by applicable laws  
-✓ **Governance escalation**: AI Ethics Committee resolves metric conflicts  
+- **Domain-specific guidance**: CoE provides metric recommendations per domain  
+- **FDR for metric selection**: Document rationale once, reference repeatedly  
+- **Prioritize 3-5 core metrics**: Don't try to optimize everything  
+- **Regulatory alignment**: Use metrics mandated by applicable laws  
+- **Governance escalation**: AI Ethics Committee resolves metric conflicts  
 
 ---
 
@@ -1362,11 +1362,11 @@ ROI: 430% over 3 years
 - Uncertainty about acceptable trade-offs
 
 **Solutions**:
-✓ **Quantify trade-off explicitly**: "2% accuracy loss for 9% fairness improvement"  
-✓ **Governance escalation**: AI Ethics Committee makes trade-off decision  
-✓ **FDR documentation**: Record rationale for future reference  
-✓ **Regulatory framing**: "Performance loss acceptable for compliance"  
-✓ **Optimize both**: More time on hyperparameter tuning to minimize trade-off  
+- **Quantify trade-off explicitly**: "2% accuracy loss for 9% fairness improvement"  
+- **Governance escalation**: AI Ethics Committee makes trade-off decision  
+- **FDR documentation**: Record rationale for future reference  
+- **Regulatory framing**: "Performance loss acceptable for compliance"  
+- **Optimize both**: More time on hyperparameter tuning to minimize trade-off  
 
 ---
 
@@ -1378,11 +1378,11 @@ ROI: 430% over 3 years
 - Team frustrated with technical challenges
 
 **Solutions**:
-✓ **Start simpler**: Try reweighting or post-processing first  
-✓ **Tech Fairness Lead support**: Hands-on pairing for complex interventions  
-✓ **External expertise**: Bring in consultant for advanced techniques  
-✓ **Phased approach**: Basic intervention first, advanced later  
-✓ **Hyperparameter sensitivity**: Systematic grid search for stability  
+- **Start simpler**: Try reweighting or post-processing first  
+- **Tech Fairness Lead support**: Hands-on pairing for complex interventions  
+- **External expertise**: Bring in consultant for advanced techniques  
+- **Phased approach**: Basic intervention first, advanced later  
+- **Hyperparameter sensitivity**: Systematic grid search for stability  
 
 ---
 
@@ -1394,11 +1394,11 @@ ROI: 430% over 3 years
 - Stakeholders disagree on success
 
 **Solutions**:
-✓ **Pre-agreed metrics**: Define in user story before implementation  
-✓ **Primary + secondary metrics**: Clear hierarchy  
-✓ **FDR for metric selection**: Don't re-litigate each time  
-✓ **Impossibility theorem education**: Explain why perfect fairness across all definitions is impossible  
-✓ **Governance decision**: AI Ethics Committee resolves conflicts  
+- **Pre-agreed metrics**: Define in user story before implementation  
+- **Primary + secondary metrics**: Clear hierarchy  
+- **FDR for metric selection**: Don't re-litigate each time  
+- **Impossibility theorem education**: Explain why perfect fairness across all definitions is impossible  
+- **Governance decision**: AI Ethics Committee resolves conflicts  
 
 ---
 
@@ -1661,7 +1661,7 @@ ROI: 430% over 3 years
 **Step 2: Compile Compliance Package**
 
 □ Organize evidence by regulatory requirement:
-  ```
+  ```markdown
   /compliance-package/
     /EU-AI-Act/
       /Article-9-Risk-Management/
@@ -1682,9 +1682,9 @@ ROI: 430% over 3 years
       - 80-percent-rule-analysis.xlsx
   ```
 
-□ Verify all required documents present
-□ Check document quality and completeness
-□ Ensure proper version control and dates
+- Verify all required documents present
+- Check document quality and completeness
+- Ensure proper version control and dates
 
 **Step 3: Conduct Dry-Run Audit**
 
@@ -1701,10 +1701,10 @@ ROI: 430% over 3 years
 
 **Step 4: Remediation**
 
-□ Address critical gaps identified in dry-run
-□ Improve documentation quality
-□ Update evidence where needed
-□ Re-review until audit-ready
+- Address critical gaps identified in dry-run
+- Improve documentation quality
+- Update evidence where needed
+- Re-review until audit-ready
 
 **Deliverables**:
 - Complete compliance package
