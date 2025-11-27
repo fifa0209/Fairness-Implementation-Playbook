@@ -241,14 +241,6 @@ See [Implementation Workflow](05_Implementation-Workflow.md) for detailed mitiga
 **Contribute to the Playbook**:
 This is a living document. Submit improvements, lessons learned, and success stories to help the community.
 
-### Document Information
-
-- **Version**: 1.0
-- **Status**: Approved for Implementation
-- **Owner**: Chief AI Ethics Officer
-- **Last Updated**: 2024
-- **Next Review**: 6 months
-
 ### License and Attribution
 
 This playbook builds on the work of researchers, practitioners, and advocates across the AI fairness community. Special thanks to the teams who shared their implementation experiences, the regulatory bodies providing guidance, and most importantly, the affected communities who hold us accountable to do better.
