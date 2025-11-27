@@ -73,10 +73,10 @@ graph TB
 1. Begin with [Fair AI Scrum Toolkit](01_Fair-AI-Scrum-Toolkit.md)
 2. Reference [Advanced Architecture Cookbook](03_Advanced-Architecture-Cookbook.md) for your system type
 3. Use templates for immediate application
-   1. [User Story](Fairness-Implementation-Playbook/templates/fairness-user-story-template.md)
-   2. [FDR Record](Fairness-Implementation-Playbook/templates/fairness-decision-record-template.md)
-   3. [RACI Matrix](Fairness-Implementation-Playbook/templates/raci-matrix-template.md)
-   4. [Sprint Planning Checklist](Fairness-Implementation-Playbook/templates/sprint-planning-checklist.md)
+   1. [User Story](templates/fairness-user-story-template.md)
+   2. [FDR Record](templates/fairness-decision-record-template.md)
+   3. [RACI Matrix](templates/raci-matrix-template.md)
+   4. [Sprint Planning Checklist](templates/sprint-planning-checklist.md)
 5. Track progress with [Validation Framework](07_Validation-Framework.md)
 
 **For Compliance/Legal**:
