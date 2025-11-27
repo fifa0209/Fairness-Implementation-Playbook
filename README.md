@@ -1,4 +1,4 @@
-## Fairness Implementation Playbook
+# Fairness Implementation Playbook
 Main entry point and executive summary.# Fairness Implementation Playbook
 
 **Version 1.0** | Developed by EquiHire | Last Updated: 2024
@@ -72,8 +72,12 @@ graph TB
 **For Technical Teams**:
 1. Begin with [Fair AI Scrum Toolkit](01_Fair-AI-Scrum-Toolkit.md)
 2. Reference [Advanced Architecture Cookbook](03_Advanced-Architecture-Cookbook.md) for your system type
-3. Use [templates/](templates/) for immediate application
-4. Track progress with [Validation Framework](07_Validation-Framework.md)
+3. Use templates for immediate application
+   1. [User Story](Fairness-Implementation-Playbook/templates/fairness-user-story-template.md)
+   2. [FDR Record](Fairness-Implementation-Playbook/templates/fairness-decision-record-template.md)
+   3. [RACI Matrix](Fairness-Implementation-Playbook/templates/raci-matrix-template.md)
+   4. [Sprint Planning Checklist](Fairness-Implementation-Playbook/templates/sprint-planning-checklist.md)
+5. Track progress with [Validation Framework](07_Validation-Framework.md)
 
 **For Compliance/Legal**:
 1. Start with [Regulatory Compliance Guide](04_Regulatory-Compliance-Guide.md)
@@ -219,11 +223,11 @@ gantt
 
 ### Common Pitfalls to Avoid
 
-⚠️ **Fairness Theater**: Completing checklists without meaningful engagement  
-⚠️ **Governance Overhead**: Excessive meetings and documentation slowing development  
-⚠️ **Metric Fixation**: Optimizing for metrics without addressing real-world equity  
-⚠️ **Siloed Implementation**: Fairness team disconnected from product development  
-⚠️ **Regulatory Fragmentation**: Each jurisdiction treated separately, exploding costs  
+- **Fairness Theater**: Completing checklists without meaningful engagement  
+- **Governance Overhead**: Excessive meetings and documentation slowing development  
+- **Metric Fixation**: Optimizing for metrics without addressing real-world equity  
+- **Siloed Implementation**: Fairness team disconnected from product development  
+- **Regulatory Fragmentation**: Each jurisdiction treated separately, exploding costs  
 
 See [Implementation Workflow](05_Implementation-Workflow.md) for detailed mitigation strategies.
 
@@ -253,7 +257,7 @@ This playbook builds on the work of researchers, practitioners, and advocates ac
 
 ## Next Steps
 
-1. **Leadership**: Review [business case and ROI](#resource-requirements) → Make go/no-go decision
+1. **Leadership**: Review [business case and ROI](README.md) → Make go/no-go decision
 2. **Program Managers**: Study [Implementation Workflow](05_Implementation-Workflow.md) → Plan deployment
 3. **Technical Teams**: Start with [Fair AI Scrum Toolkit](01_Fair-AI-Scrum-Toolkit.md) → Apply templates
 4. **Compliance**: Map jurisdictions in [Regulatory Compliance Guide](04_Regulatory-Compliance-Guide.md) → Build evidence
