@@ -4,6 +4,28 @@
 
 This playbook provides a systematic methodology for deploying AI fairness across organizational contexts, integrating team-level practices, governance frameworks, architecture-specific strategies, and regulatory compliance into a unified workflow.
 
+### Executive Brief
+
+#### What changes:
+- Fairness integrated into daily development
+- Clear governance ownership established
+- Architecture-specific interventions used consistently
+
+#### Who owns it:
+- Chief AI Ethics Officer (program owner)
+- Engineering leaders (implementation)
+- Compliance (regulatory alignment)
+
+#### Expected outcomes:
+- Reduced bias incidents
+- Reduced compliance risk
+- Faster, more stable ML delivery
+
+#### Leadership decisions required:
+1. Approve program budget
+2. Assign governance owners
+3. Approve risk thresholds and fairness requirements
+
 ### The Challenge
 
 Organizations face three critical gaps when implementing AI fairness:
@@ -169,25 +191,6 @@ Before beginning, assess readiness across five dimensions:
 - Business growth: Fair AI certification enables entry to regulated markets
 - **Typical breakeven: 12-18 months**
 - **3-Year ROI: 250-400%**
-
-### 12-Month Implementation Timeline
-```mermaid
-gantt
-    title Fairness Implementation Roadmap
-    dateFormat YYYY-MM
-    section Foundation
-    Risk Classification & Governance    :done, 2024-01, 2024-02
-    section Team Integration
-    Fair AI Scrum Deployment           :active, 2024-03, 2024-04
-    section Technical
-    Architecture-Specific Interventions :2024-05, 2024-07
-    section Compliance
-    Regulatory Framework Integration    :2024-08, 2024-09
-    section Operations
-    Monitoring & Governance Activation  :2024-10, 2024-11
-    section Validation
-    Effectiveness Assessment            :2024-12, 2024-12
-```
 
 ### Success Metrics
 
