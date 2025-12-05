@@ -1,208 +1,331 @@
-markdown
-# RACI Matrix Template for Fairness Decisions
+# AI Fairness RACI Matrix Template
 
-## Overview
-The RACI matrix defines clear accountability for fairness decisions across the organization. This template can be adapted for different organizational structures and decision types.
+## Document Information
+- **Version:** 1.0
+- **Last Updated:** December 2025
+- **Owner:** AI Governance Office
+- **Review Frequency:** Quarterly
+
+---
 
 ## RACI Definitions
-- **Responsible (R)**: Does the work to complete the task
-- **Accountable (A)**: Ultimately answerable for completion (only ONE person)
-- **Consulted (C)**: Provides input before decision
-- **Informed (I)**: Kept updated on progress/outcomes
 
-## Core Fairness Decision Matrix
+- **R (Responsible):** Performs the work to complete the task
+- **A (Accountable):** Has final decision authority (ONE person only)
+- **C (Consulted):** Provides input before decision is made
+- **I (Informed):** Receives updates after decision is made
+
+**Critical Rule:** Each decision must have exactly ONE Accountable party.
+
+---
+
+## Organization Size Guide
+
+### Small Organization (<50 employees)
+- Chief AI Ethics Officer → VP Engineering or CEO
+- Technical Fairness Lead → Senior Engineer
+- Domain Specialist → Product Manager
+- Fairness Champion → Team member (10-20% time)
+
+### Medium Organization (50-500 employees)
+- Chief AI Ethics Officer → Director/VP-level role
+- Technical Fairness Lead → Dedicated role (1-2 FTE)
+- Domain Specialist → Product Manager per product
+- Fairness Champion → 1 per team (10-20% time)
+- AI Ethics Committee → 5-8 cross-functional members
+
+### Large Organization (500+ employees)
+- Chief AI Ethics Officer → C-suite/SVP-level
+- Central Fairness CoE → 5-10 FTE
+- Business Unit Fairness Leads → 1-2 per BU
+- Domain Specialists → Multiple per BU
+- Fairness Champions → 1 per team
+- AI Ethics Committee → 10-15 members
+
+---
+
+## Strategic Decisions (Executive/Board Level)
 
 | Decision Type | Responsible | Accountable | Consulted | Informed |
 |---------------|-------------|-------------|-----------|----------|
-| **Fairness metric selection** | Technical Fairness Lead | Chief AI Ethics Officer | Domain Specialists, Legal | All development teams |
-| **Fairness threshold definition** | Domain Specialist | Chief AI Ethics Officer | Recruiting Managers, Product | Executive team |
-| **Fairness-performance trade-off resolution** | Technical Fairness Lead | Chief AI Ethics Officer | AI Ethics Committee | All stakeholders |
-| **High-risk system deployment approval** | Product Manager | Chief AI Ethics Officer | AI Ethics Committee, Legal | Executive team, Users |
-| **Bias incident response (Critical)** | On-call engineer | Technical Fairness Lead | Chief AI Ethics Officer | CEO, Affected users |
-| **Fairness intervention selection** | ML Engineer | Technical Fairness Lead | Domain Specialist | Product Manager |
-| **Model card content and disclosure** | Technical writer | Domain Specialist | Legal, Technical Lead | Public/Users |
-| **Compliance framework updates** | Legal/Compliance | Chief AI Ethics Officer | Technical Fairness Lead | All teams |
+| Organization-wide fairness principles | AI Ethics Committee Chair | Chief AI Ethics Officer | Executive Team, Legal, Board | All employees |
+| Annual fairness budget allocation | Chief AI Ethics Officer | CFO | Executive Team, Technical Lead | All business units |
+| Fairness policy and standards | Technical Fairness Lead | Chief AI Ethics Officer | Legal, Compliance, Domain Leads | All teams |
+| Protected attribute policy | Chief AI Ethics Officer | Chief Legal Officer | Privacy Officer, Ethics Committee | All teams, Regulators |
+| Third-party vendor fairness requirements | Procurement Lead | Chief AI Ethics Officer | Legal, Technical Lead | All teams |
 
-## Implementation Guidelines
+---
 
-### For Small Organizations (<50 employees)
-```markdown
+## Tactical Decisions (System/Product Level)
+
 | Decision Type | Responsible | Accountable | Consulted | Informed |
 |---------------|-------------|-------------|-----------|----------|
-| Fairness metric selection | Senior Engineer | VP Engineering | Product Manager | All teams |
-| Deployment approval | Product Manager | VP Engineering | Legal (external) | Executive team |
-| Bias incident response | On-call engineer | Senior Engineer | VP Engineering | All stakeholders |
-For Large Enterprises (>1000 employees)
-markdown
+| Fairness metric selection per system | Technical Fairness Lead | Domain Specialist | ML Engineers, Legal, Ethics Committee | Product Team |
+| Fairness threshold definition | Domain Specialist | Technical Fairness Lead | Legal, Ethics Committee | Product Team, Compliance |
+| Fairness-performance trade-off resolution | Technical Fairness Lead | Chief AI Ethics Officer | Ethics Committee, Domain Specialist, Legal | Executive Sponsor |
+| Fairness intervention strategy | ML Engineer | Technical Fairness Lead | Domain Specialist, Data Scientist | Product Team |
+| Protected attributes for system | Domain Specialist | Technical Fairness Lead | Legal, Privacy Officer | Product Team |
+| Edge case handling policy | ML Engineer | Domain Specialist | Technical Fairness Lead, Support Team | Engineering Team |
+| Monitoring frequency and thresholds | ML Engineer | Technical Fairness Lead | DevOps, Domain Specialist | Monitoring Team |
+| Model card content | Technical Writer | Domain Specialist | Technical Fairness Lead, Legal | Public, Regulators |
+| Fairness Decision Record approval | Fairness Champion | Technical Fairness Lead | Domain Specialist, Legal | Ethics Committee |
+
+---
+
+## Operational Decisions (Team/Feature Level)
+
 | Decision Type | Responsible | Accountable | Consulted | Informed |
 |---------------|-------------|-------------|-----------|----------|
-| Fairness metric selection | Technical Fairness Lead | Chief AI Ethics Officer | Domain Specialists, Legal, Compliance | All BUs |
-| Portfolio-level fairness strategy | BU Fairness Leads | Chief AI Ethics Officer | Executive Committee, Legal | All teams |
-| Cross-BU fairness standards | Central CoE | Chief AI Ethics Officer | All BU Fairness Leads | Executive team |
-Decision Tiers Framework
-Tier 1: Strategic Decisions
-Examples: Fairness principles adoption, major resource allocation, regulatory strategy
+| Fairness test case design | QA Engineer | Team Fairness Champion | ML Engineer, Domain Specialist | Team Lead |
+| Disaggregated performance analysis | Data Scientist | ML Engineer | Fairness Champion | Team Lead |
+| Fairness metric calculation | ML Engineer | Team Fairness Champion | Technical Fairness Lead | Team Lead |
+| Monitoring dashboard configuration | DevOps Engineer | ML Engineer | Technical Fairness Lead | Monitoring Team |
+| Alert threshold calibration | ML Engineer | Team Fairness Champion | Technical Fairness Lead | On-call engineers |
+| Fairness regression testing | QA Engineer | ML Engineer | Fairness Champion | Team Lead |
+| Documentation updates | Technical Writer | ML Engineer | Fairness Champion | Team |
+| User story fairness requirements | Product Owner | Domain Specialist | Team Fairness Champion | Team |
 
-Accountable: Chief AI Ethics Officer + Executive Sponsor
+---
 
-Consulted: AI Ethics Committee, Legal, Executive Team
+## Deployment and Release Decisions
 
-Tier 2: Tactical Decisions
-Examples: System-specific fairness approaches, metric selection, intervention strategies
+| Decision Type | Responsible | Accountable | Consulted | Informed |
+|---------------|-------------|-------------|-----------|----------|
+| High-risk system deployment | Product Manager | Chief AI Ethics Officer | Ethics Committee, Legal, Technical Lead | Executive Team, Users |
+| Medium-risk system deployment | Product Manager | Technical Fairness Lead | Domain Specialist, Legal | Chief AI Ethics Officer |
+| Low-risk system deployment | Team Lead | Product Manager | Team Fairness Champion | Technical Fairness Lead |
+| Model version release | ML Engineer | Technical Fairness Lead | Domain Specialist, QA | Product Owner |
+| Fairness gate pass/fail | Team Fairness Champion | Technical Fairness Lead | ML Engineer, QA | Product Owner |
+| Rollback due to fairness issue | Incident Commander | Technical Fairness Lead | ML Engineer, DevOps | Chief AI Ethics Officer |
 
-Accountable: Technical Fairness Lead
+---
 
-Consulted: Domain Specialists, Product Managers, Legal
+## Incident Response (by Severity)
 
-Tier 3: Operational Decisions
-Examples: Implementation details, testing approaches, monitoring configuration
+### Critical Incidents
+*Severe fairness violation, legal breach, significant user harm*
 
-Accountable: Team Fairness Champion
+| Activity | Responsible | Accountable | Consulted | Informed | Response Time |
+|----------|-------------|-------------|-----------|----------|---------------|
+| Detection and triage | On-call Engineer | Incident Commander | Technical Fairness Lead | Chief AI Ethics Officer | 0-1 hour |
+| Immediate containment | Incident Commander | Technical Fairness Lead | Chief AI Ethics Officer, Legal | Executive Sponsor | 1-4 hours |
+| Root cause analysis | ML Engineer | Technical Fairness Lead | Data Scientist, Domain Specialist | Chief AI Ethics Officer | 4-24 hours |
+| Remediation strategy | Technical Fairness Lead | Chief AI Ethics Officer | ML Engineer, Legal, Product Owner | Executive Team | 24-48 hours |
+| User communication | Communications Lead | Chief AI Ethics Officer | Legal, Product Owner | Affected Users, Public | Throughout |
 
-Consulted: Technical Lead, Domain Expert
+### Major Incidents
+*Moderate fairness violation, user complaints, potential compliance risk*
 
-Escalation Procedures
-When to Escalate:
-Decision requires resources beyond local authority
+| Activity | Responsible | Accountable | Consulted | Informed | Response Time |
+|----------|-------------|-------------|-----------|----------|---------------|
+| Detection and triage | On-call Engineer | Team Lead | Technical Fairness Lead | Product Owner | 0-4 hours |
+| Root cause analysis | ML Engineer | Team Lead | Technical Fairness Lead | Domain Specialist | 1-3 days |
+| Remediation strategy | Team Lead | Technical Fairness Lead | ML Engineer, Domain Specialist | Chief AI Ethics Officer | 3-5 days |
 
-Significant fairness-performance trade-offs (>5% impact)
+### Minor Incidents
+*Small fairness drift, edge case, no immediate user impact*
 
-Potential regulatory compliance issues
+| Activity | Responsible | Accountable | Consulted | Informed | Response Time |
+|----------|-------------|-------------|-----------|----------|---------------|
+| Detection and triage | Team member | Team Fairness Champion | ML Engineer | Team Lead | 1-2 days |
+| Root cause analysis | ML Engineer | Team Fairness Champion | Data Scientist | Team Lead | 3-7 days |
+| Remediation strategy | Team Fairness Champion | Team Lead | Technical Fairness Lead | Product Owner | 1-2 weeks |
 
-Cross-team or cross-system implications
+---
 
-Stakeholder disagreement cannot be resolved locally
+## Compliance and Audit
 
-Escalation Path:
-Team Level: Attempt resolution within team (24 hours)
+| Decision Type | Responsible | Accountable | Consulted | Informed |
+|---------------|-------------|-------------|-----------|----------|
+| Regulatory compliance framework | Legal/Compliance Officer | Chief Legal Officer | Chief AI Ethics Officer, Technical Lead | All teams |
+| Internal audit scope definition | Internal Audit Lead | Chief AI Ethics Officer | Legal, Technical Lead | Executive Team |
+| Internal audit execution | Internal Auditor | Internal Audit Lead | Technical Lead, Domain Specialists | Chief AI Ethics Officer |
+| External audit coordination | Compliance Officer | Chief AI Ethics Officer | Legal, Technical Lead | Executive Team, Board |
+| Audit finding remediation | Technical Fairness Lead | Chief AI Ethics Officer | Legal, Risk Management | Executive Team |
+| Regulatory reporting | Compliance Officer | Chief Legal Officer | Chief AI Ethics Officer, Technical Lead | Regulators, Board |
 
-Domain Level: Escalate to Technical Fairness Lead (48 hours)
+---
 
-Organizational Level: Escalate to Chief AI Ethics Officer (72 hours)
+## Escalation Procedures
 
-Executive Level: Escalate to AI Ethics Committee (1 week)
+### Level 1: Team
+- **Authority:** Team Fairness Champion, Team Lead
+- **Escalate when:** Cannot resolve within 1-3 days or lacks expertise
+- **Escalate to:** Technical Fairness Lead or Domain Specialist
 
-Best Practices
-Clear Authority:
-Ensure exactly ONE "Accountable" per decision type
+### Level 2: Technical/Domain Lead
+- **Authority:** Technical Fairness Lead, Domain Specialist
+- **Escalate when:** Requires cross-team coordination or significant resources
+- **Escalate to:** Chief AI Ethics Officer
 
-Avoid "A by committee" which leads to decision paralysis
+### Level 3: Chief AI Ethics Officer
+- **Authority:** Chief AI Ethics Officer
+- **Escalate when:** High-risk decision, major trade-off, legal issue
+- **Escalate to:** AI Ethics Committee or Executive Team
 
-Document escalation paths explicitly
+### Level 4: Executive/Committee
+- **Authority:** AI Ethics Committee, Executive Team
+- **Escalate when:** Strategic impact, major resource allocation
+- **Escalate to:** CEO or Board of Directors
 
-Effective Consultation:
-Include diverse perspectives in consultation
+### Level 5: Board
+- **Authority:** Board of Directors
+- **Escalate when:** Major reputational risk, regulatory action, crisis
+- **Escalate to:** Final authority
 
-Document consultation inputs and how they influenced decisions
+---
 
-Balance technical and domain expertise
+## Role Definitions
 
-Timely Communication:
-Inform stakeholders at appropriate stages
+### Chief AI Ethics Officer
+- **Accountability:** Overall fairness strategy, high-risk decisions, critical incidents
+- **Key Responsibilities:** Set fairness principles, approve high-risk deployments, chair ethics committee, oversee budget, interface with regulators
+- **Reports to:** CEO or CTO
 
-Use established communication channels
+### Technical Fairness Lead
+- **Accountability:** Fairness methodology, system-level decisions, technical guidance
+- **Key Responsibilities:** Define fairness methods, approve metrics/thresholds, provide technical guidance, manage tools, coordinate champions, lead incident response
+- **Reports to:** Chief AI Ethics Officer or VP Engineering
 
-Document communication in Fairness Decision Records
+### Domain Specialist (Product Owner)
+- **Accountability:** System-specific fairness aligned with user needs, thresholds
+- **Key Responsibilities:** Define fairness goals per system, balance objectives, approve model cards, define human review processes, prioritize fairness work
+- **Reports to:** Product Leadership or BU Head
 
-Regular Review:
-Review RACI matrix quarterly
+### Team Fairness Champion
+- **Accountability:** Team-level fairness integration, operational decisions
+- **Key Responsibilities:** Integrate fairness into sprints, review user stories, conduct testing, escalate issues, maintain documentation, educate team
+- **Time Allocation:** 10-20% of capacity
+- **Reports to:** Team Lead
 
-Update based on organizational changes
+### AI Ethics Committee
+- **Accountability:** Strategic oversight, high-stakes decision review, policy guidance
+- **Composition:** 8-15 members (Chief AI Ethics Officer as Chair, Technical Lead, Legal, Product/Engineering Leadership, Domain Specialists, External Advisors)
+- **Meeting Cadence:** Monthly or bi-weekly, emergency as needed
 
-Incorporate lessons learned from decision processes
+---
 
-text
+## Implementation Checklist
 
-## templates/sprint-planning-checklist.md
+### Week 1-2: Assessment
+- [ ] Map existing fairness decision processes
+- [ ] Identify current roles and responsibilities
+- [ ] Document pain points and gaps
+- [ ] Survey stakeholder satisfaction
 
-```markdown
-# Sprint Planning Fairness Integration Checklist
+### Week 3-4: Customization
+- [ ] Select organization size template
+- [ ] Map template roles to actual job titles
+- [ ] Identify role gaps and resource needs
+- [ ] Get leadership buy-in
 
-## Pre-Planning Preparation
+### Week 5-6: Validation
+- [ ] Present draft RACI to stakeholders
+- [ ] Conduct workshops with each function
+- [ ] Resolve conflicts and ambiguities
+- [ ] Ensure ONE Accountable per decision
 
-### [ ] Review Fairness Backlog
-- Review fairness backlog items from previous sprint
-- Check for new fairness requirements from governance body
-- Review monitoring alerts and incident reports
-- Update fairness risk assessment for upcoming features
+### Week 7-8: Documentation
+- [ ] Finalize RACI matrix
+- [ ] Create reference materials
+- [ ] Communicate broadly
+- [ ] Conduct training sessions
 
-### [ ] Capacity Planning
-- Confirm fairness capacity allocation (15-30% target)
-- Ensure fairness champion availability
-- Schedule fairness review sessions
-- Allocate buffer for unexpected fairness work
+### Week 9-10: Integration
+- [ ] Update Fairness Decision Record template
+- [ ] Modify user story templates
+- [ ] Update sprint planning processes
+- [ ] Configure tools (JIRA, Confluence)
 
-## During Sprint Planning
+### Week 11-12: Pilot
+- [ ] Pilot with 1-2 teams
+- [ ] Collect feedback
+- [ ] Identify bottlenecks
+- [ ] Refine based on learnings
 
-### [ ] User Story Fairness Review
-- All user stories include fairness dimensions (SAFE framework)
-- Fairness acceptance criteria defined (FAIR framework)
-- Intersectional considerations identified for high-risk features
-- Protected attributes explicitly documented
+### Week 13+: Rollout
+- [ ] Expand organization-wide
+- [ ] Provide ongoing support
+- [ ] Monitor adoption
+- [ ] Quarterly reviews and updates
 
-### [ ] Task Breakdown
-- Fairness tasks broken down and estimated
-- Dependencies on fairness evaluation tools identified
-- Testing requirements for fairness metrics specified
-- Documentation tasks included
+---
 
-### [ ] Risk Assessment
-- High-risk features flagged for special attention
-- Mitigation strategies for identified fairness risks
-- Contingency plans for fairness-performance trade-offs
-- Escalation paths documented
+## Common Pitfalls to Avoid
 
-## Story Review Questions
+1. **Multiple Accountable Parties:** Always assign exactly ONE Accountable person per decision
+2. **No Responsible Party:** Ensure someone is assigned to do the work
+3. **Over-Consultation:** Consult only those whose input is necessary
+4. **Under-Communication:** Keep all Informed stakeholders updated
+5. **Stale RACI:** Review and update quarterly as organization evolves
+6. **Excessive Escalation:** Empower teams appropriately for their decision tier
+7. **Process Bureaucracy:** Keep lightweight for operational decisions
 
-### Impact Assessment
-- Does this story impact different demographic groups differently?
-- What protected attributes are relevant to this feature?
-- Are there intersectional considerations we're missing?
+---
 
-### Metric Selection
-- What fairness metric is appropriate for this functionality?
-- What thresholds should we set for success?
-- How will we measure intersectional performance?
+## Quarterly Review Process
 
-### Implementation Considerations
-- What technical interventions might be needed?
-- What data requirements exist for fairness evaluation?
-- What monitoring will be implemented?
+### Metrics to Track
+- Number of decisions by tier
+- Average decision cycle time
+- Number and reason for escalations
+- Stakeholder satisfaction scores
+- Percentage of decisions following RACI
+- Time to resolve fairness incidents
 
-### Risk Management
-- What trade-offs might emerge during implementation?
-- What are the failure modes for fairness?
-- What safeguards need to be implemented?
+### Review Agenda (2 hours)
+1. **Metrics Review** (30 min): Present quarterly metrics and trends
+2. **Pain Points** (30 min): Identify bottlenecks and authority gaps
+3. **RACI Updates** (45 min): Review and approve changes
+4. **Action Planning** (15 min): Assign owners and next steps
 
-## Definition of Done (Fairness-Enhanced)
+### Update Triggers
+- Organization restructures
+- New roles created or eliminated
+- New decision types emerge
+- Escalation patterns reveal gaps
+- Regulatory changes require new processes
 
-### [ ] Fairness Testing
-- Disaggregated performance testing completed
-- Intersectional analysis performed
-- Counterfactual testing for high-stakes decisions
-- Red-team testing for adversarial inputs
+---
 
-### [ ] Documentation
-- Fairness metrics documented and within thresholds
-- Model card updated with fairness properties
-- Limitations documented with safeguards
-- Fairness Decision Record created for major decisions
+## Integration with Other Frameworks
 
-### [ ] Monitoring
-- Monitoring configured for key fairness metrics
-- Alert thresholds set appropriately
-- Dashboards updated with new functionality
-- Documentation for ongoing fairness evaluation
+### Fairness Decision Records (FDRs)
+- Reference RACI in FDR Section 4: Stakeholders Involved
+- Document who was Accountable, Responsible, Consulted, Informed
+- Link FDR to specific RACI matrix section
 
-### [ ] Governance
-- Required approvals obtained
-- Stakeholders informed of changes
-- Compliance evidence collected
-- Deployment checklist completed
+### User Stories
+- Product Owner accountable for story creation
+- Fairness Champion responsible for fairness requirements
+- Team Fairness Champion accountable for fairness DoD gate
+- Reference RACI in sprint planning and reviews
 
-## Exit Criteria
+### Monitoring Dashboards
+- Dashboard owners defined by RACI
+- Alert escalation follows RACI path
+- Dashboard audiences map to RACI Informed stakeholders
 
-### [ ] Completion Standards
-- ≥80% of stories include explicit fairness requirements
-- Fairness capacity allocation meets team target
-- All high-risk stor
+---
+
+## Contact and Support
+
+**RACI Matrix Owner:** Chief AI Ethics Officer  
+**Questions:** [fairness-governance@organization.com]  
+**Updates:** Review quarterly or as organizational changes occur  
+**Training:** Contact L&D for role-specific RACI training
+
+---
+
+## Document Control
+
+**Approval Required From:**
+- Chief AI Ethics Officer
+- Chief Legal Officer
+- Chief Technology Officer
+
+**Distribution:**
+- All employees (awareness)
+- All managers (implementation)
+- Fairness Champions (detailed use)
+- Executive Leadership (oversight)
