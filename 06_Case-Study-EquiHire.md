@@ -211,48 +211,33 @@ ROI: 52% Year 1, 335% over 3 years
 #### Week 1-2: Risk Classification and Governance Design
 
 **Activity: AI System Portfolio Review**
-```python
-# EquiHire risk classification results
-systems = [
-    {
-        'name': 'Resume Screening (Team A)',
-        'domain': 'employment',
-        'domain_impact': 'high_stakes',
-        'decision_impact': 'life_altering',
-        'autonomy_level': 'high_automation',
-        'scale': 'large',
-        'reversibility': 'difficult'
-    },
-    {
-        'name': 'Candidate Ranking (Team C)',
-        'domain': 'employment',
-        'domain_impact': 'high_stakes',
-        'decision_impact': 'life_altering',
-        'autonomy_level': 'high_automation',
-        'scale': 'large',
-        'reversibility': 'very_difficult'
-    },
-    {
-        'name': 'Interview Scheduling (Team B)',
-        'domain': 'employment',
-        'domain_impact': 'high_stakes',
-        'decision_impact': 'moderate_impact',
-        'autonomy_level': 'moderate_automation',
-        'scale': 'large',
-        'reversibility': 'moderate'
-    }
-]
 
-# Results:
-# Resume Screening: HIGH-RISK (Score: 4.2/5) - Priority 1
-# Candidate Ranking: HIGH-RISK (Score: 4.5/5) - Priority 1 (CRITICAL)
-# Interview Scheduling: HIGH-RISK (Score: 3.8/5) - Priority 2
-```
+During Weeks 1–2, EquiHire completed a high-level review of all AI systems to classify risk, regulatory exposure, and operational impact. Three core systems were evaluated using six criteria: **domain**, **domain impact**, **decision impact**, **automation level**, **scale**, and **reversibility**.
 
-**Key Decision**: All three systems classified as **HIGH-RISK** under EU AI Act Annex III (employment), requiring full compliance obligations.
+**Resume Screening (Team A)**
+Processes large volumes of resumes and automatically selects candidates for review. Operating in the **employment domain** with **high-stakes, life-altering** impact, the system uses **high automation** at **large scale** and produces decisions that are **difficult to reverse**, especially once downstream processes act on its outputs.  
+**Risk Outcome:** High-Risk (Priority 1)
+
+**Candidate Ranking (Team C)**
+Predicts job fit and ranks candidates for recruiter attention. This system has the **highest downstream influence**, with **life-altering** impact and **very difficult-to-reverse** decisions. It is deeply embedded in hiring outcomes and runs at **high automation** and **large scale**.  
+**Risk Outcome:** High-Risk – Critical (Priority 1)
+
+**Interview Scheduling (Team B)**
+Recommends interview time slots using availability data and preference inference. While still within the **employment domain**, the **decision impact is moderate**, autonomy is **moderate**, and decisions are **more reversible** than other systems.  
+**Risk Outcome:** High-Risk (Priority 2)
+
+**Summary of Classification**
+| System | Risk Level | Priority |
+|--------|------------|----------|
+| Resume Screening | High-Risk | Priority 1 |
+| Candidate Ranking | High-Risk (Critical) | Priority 1 |
+| Interview Scheduling | High-Risk | Priority 2 |
+
+**Key Decision**
+All three systems fall under **EU AI Act High-Risk (Employment)**, triggering full compliance obligations across governance, documentation, data governance, human oversight, and continuous monitoring.
 
 **Governance Structure Established**:
-```markdown
+
 **Fairness Leadership Roles** (3.5 FTE total):
 
 1. **Chief AI Ethics Officer**: VP Engineering Sarah Chen (0.5 FTE)
@@ -292,7 +277,6 @@ systems = [
    - All three Fairness Champions
    - Jennifer Liu (lead)
    - Product Managers from each team
-```
 
 **RACI Matrix Created**:
 
@@ -313,7 +297,7 @@ Key decisions mapped (see full matrix in Organizational Integration Toolkit):
 **Fairness Decision Records Implemented**:
 
 **Example FDR: Metric Selection**
-```markdown
+
 # FDR-2024-003: Fairness Metric Selection for Candidate Ranking
 
 **Date**: 2024-03-22
@@ -361,7 +345,7 @@ secondary prevents severe representation disparities.
 ## Approval
 Sarah Chen, 2024-03-22
 Next Review: 2024-09-22
-```
+
 
 **Communication Protocols Established**:
 
@@ -376,7 +360,7 @@ Multi-audience approach implemented:
 | **Regulators** | Compliance package | Full evidence, technical documentation, audit trails | On request |
 
 **Example: Candidate-Facing Communication**
-```markdown
+
 **How EquiHire Ensures Fair AI**
 
 Our AI helps prioritize candidates but fairness is our top priority.
@@ -398,14 +382,13 @@ We measure and publish fairness metrics. Last quarter:
 - Independent audit: PASSED
 
 **Questions?** Contact: fairness@equihire.com
-```
 
 ---
 
 #### Week 7-8: Training and Readiness
 
 **Training Delivered**:
-```markdown
+
 **Level 1: All Employees** (2 hours, 85/85 attended)
 - Fairness fundamentals
 - EquiHire's fairness commitment
@@ -429,7 +412,7 @@ We measure and publish fairness metrics. Last quarter:
 - Governance and FDR creation
 - Stakeholder management
 - Escalation and incident response
-```
+
 
 **Readiness Assessment: PASS**
 
@@ -444,7 +427,6 @@ All criteria met:
 
 **Decision**: Proceed to Stage 2 (Fair AI Scrum Deployment)
 
----
 
 ### Stage 2: Team Integration (May-June 2024, Weeks 9-16)
 
@@ -455,7 +437,7 @@ All criteria met:
 **Fair AI Scrum Deployment**:
 
 **Modified User Story Example**:
-```markdown
+
 **User Story**: Candidate Ranking for Software Engineer Positions
 
 As a recruiting manager, I want candidates ranked by predicted job fit 
@@ -497,10 +479,10 @@ and their intersections (particularly gender × race and first-generation × rac
 □ Model card updated with fairness properties
 □ FDR created if trade-offs accepted
 □ Monitoring alerts configured for fairness drift
-```
+
 
 **Sprint Execution** (Sprint 15, May 6-17, 2024):
-```markdown
+
 **Sprint Goal**: Improve candidate ranking fairness for software engineer roles
 
 **Capacity**: 40 story points total
@@ -545,7 +527,6 @@ Functional demo: 15 min
 - What to improve: Adversarial training took longer than estimated (underestimated complexity)
 - Fairness-specific: Intersectionality Matrix exercise revealed we initially missed age × disability intersection
 - Action: Improve estimation for fairness tasks, add age × disability to standard intersections
-```
 
 **Pilot Results** (After 2 sprints):
 
@@ -560,7 +541,6 @@ Functional demo: 15 min
 
 **Key Learning**: Adversarial training complexity underestimated. Created reusable library for future systems.
 
----
 
 #### Week 13-16: Scale to Teams A and B
 
@@ -594,79 +574,50 @@ Functional demo: 15 min
 **Challenge**: Representation Entanglement
 
 **Problem Identification**:
-```python
-# Protected attribute predictability test
-# Train classifier: learned representations → gender
-# Result: 73% accuracy (far above 50% random)
-# Conclusion: Gender information encoded in latent space despite removal from inputs
-```
+- Protected attribute predictability test
+- Train classifier: learned representations → gender
+- Result: 73% accuracy (far above 50% random)
+- Conclusion: Gender information encoded in latent space despite removal from inputs
+
 
 **Root Cause**: Deep neural network learned associations between:
 - Writing style → Gender
 - Activity patterns (e.g., "organized hackathon" vs. "led community outreach") → Gender
 - School quality indicators → Socioeconomic status → Race (proxy)
 
-**Intervention: Adversarial Debiasing**
-```python
-# Implementation: Adversarial architecture
-class FairCandidateRanking(nn.Module):
-    def __init__(self):
-        super().__init__()
-        self.encoder = ResumeEncoder(output_dim=128)
-        self.task_predictor = TaskPredictor(input_dim=128, output_dim=1)
-        self.discriminator = Discriminator(input_dim=128, protected_dim=2)  # Gender
-    
-    def forward(self, resumes):
-        # Encode resumes
-        representations = self.encoder(resumes)
-        
-        # Task: Predict job fit
-        job_fit_score = self.task_predictor(representations)
-        
-        # Adversary: Try to predict gender (with gradient reversal)
-        reversed_repr = GradientReversal.apply(representations, lambda_=1.0)
-        gender_prediction = self.discriminator(reversed_repr)
-        
-        return job_fit_score, gender_prediction
+### Intervention: Adversarial Debiasing
 
-# Loss function
-def train_step(model, resumes, labels, gender):
-    job_fit, gender_pred = model(resumes)
-    
-    # Task loss: Good job fit predictions
-    task_loss = F.binary_cross_entropy(job_fit, labels)
-    
-    # Adversarial loss: Confuse gender discriminator
-    # (Gradient reversal makes this work against the discriminator)
-    adv_loss = F.cross_entropy(gender_pred, gender)
-    
-    # Combined (adversarial loss will be maximized via gradient reversal)
-    total_loss = task_loss + adv_loss
-    
-    return total_loss
-```
+To address representation-level bias in the Candidate Ranking model, EquiHire implemented an **adversarial debiasing architecture**. This approach ensures the model learns task-relevant features (job-fit prediction) while actively suppressing information related to protected attributes (e.g., gender).
 
-**Hyperparameter Tuning**:
-```markdown
-**Lambda (fairness weight) sweep**:
-- λ=0.1: Gender predictability 68% (insufficient)
-- λ=0.5: Gender predictability 62% (insufficient)
-- λ=1.0: Gender predictability 58% (✓), Accuracy 82% (✓)
-- λ=2.0: Gender predictability 54% (✓), Accuracy 79% (3% loss, acceptable)
-- λ=5.0: Gender predictability 51% (✓), Accuracy 74% (6% loss, too high)
+The intervention introduced three key components:
 
-**Selected**: λ=1.0 (best balance)
-```
+1. **Shared Encoder**  
+   Learns latent representations of resumes (e.g., skills, experience, language patterns).
 
-**Results**:
+2. **Primary Task Predictor**  
+   Uses the shared representation to predict job-fit scores.
 
-| Metric | Baseline | Post-Intervention | Target | Status |
-|--------|----------|-------------------|--------|--------|
-| Gender gap (selection rate) | 12% | 2.8% | <5% | ✓ |
-| Race gap | 8% | 3.2% | <5% | ✓ |
-| Intersectional (Black women) | 18% | 3.5% | <4% | ✓ |
-| Protected attr. predictability | 73% | 58% | <60% | ✓ |
-| Overall accuracy | 84% | 82% | >80% | ✓ |
+3. **Adversarial Discriminator**  
+   Attempts to infer protected attributes from the same representation.  
+   Through **gradient reversal**, the main model is trained to *minimize* job-fit error while *maximizing* the discriminator’s error—removing protected-attribute information from representations.
+
+#### How It Works (Conceptual Flow)
+
+- The encoder generates a candidate representation.  
+- The job-fit predictor uses it to estimate suitability.  
+- Simultaneously, the adversarial discriminator tries to detect gender from the same representation.  
+- Gradient reversal ensures that improving fairness (making gender harder to detect) is built directly into training.
+
+#### Training Objective
+
+The model optimizes a combined objective:
+
+- **Task Loss:** Encourages accurate job-fit prediction.  
+- **Adversarial Loss:** Penalizes the model whenever gender can be predicted from its internal representations.  
+- **Combined Loss:** Forces the encoder to remove protected-attribute signals while retaining job-relevant information.
+
+This technique significantly reduced protected-attribute predictability (e.g., gender predictability from 73% → 58%) and closed major demographic gaps in ranking outcomes, while maintaining acceptable accuracy levels.
+
 
 **Trade-off Decision**:
 ```markdown
@@ -693,7 +644,7 @@ Approved: Sarah Chen (Chief AI Ethics Officer), 2024-07-18
 **Challenge**: Feedback Loop Amplification
 
 **Problem Identification**:
-```markdown
+
 **Baseline Analysis** (February-June 2024):
 
 Popular interview time slots (9-11 AM, Mon-Wed):
@@ -711,54 +662,57 @@ through feedback loop.
   45% get preferred slots
 
 **Impact**: 33 percentage point disparity in preferred slot access.
-```
 
-**Intervention: Exploration Policies + Popularity Discounting**
-```python
-class FairInterviewScheduler:
-    def __init__(self, epsilon=0.15, discount_factor=0.3):
-        self.epsilon = epsilon  # Exploration rate
-        self.discount_factor = discount_factor
-        self.slot_exposure = Counter()  # Track slot usage
-    
-    def recommend_slots(self, candidate, available_slots, k=5):
-        """Recommend k interview time slots"""
-        
-        recommendations = []
-        
-        for position in range(k):
-            if random.random() < self.epsilon:
-                # EXPLORE: Give visibility to underused slots
-                # Inverse popularity: less-used slots more likely
-                exposure_counts = [self.slot_exposure[slot] for slot in available_slots]
-                exploration_probs = 1.0 / (np.array(exposure_counts) + 1)
-                exploration_probs /= exploration_probs.sum()
-                
-                slot = np.random.choice(available_slots, p=exploration_probs)
-            else:
-                # EXPLOIT: Recommend by preference
-                # But apply popularity discount
-                base_scores = self.calculate_preference_scores(candidate, available_slots)
-                
-                # Discount popular slots
-                popularity_discount = 1 - self.discount_factor * np.log1p(
-                    [self.slot_exposure[slot] for slot in available_slots]
-                )
-                
-                adjusted_scores = base_scores * popularity_discount
-                
-                # Remove already recommended
-                for rec_slot in recommendations:
-                    idx = available_slots.index(rec_slot)
-                    adjusted_scores[idx] = -np.inf
-                
-                slot = available_slots[np.argmax(adjusted_scores)]
-            
-            recommendations.append(slot)
-            self.slot_exposure[slot] += 1
-        
-        return recommendations
-```
+
+#### Intervention: Exploration Policies + Popularity Discounting
+
+To reduce feedback-loop bias in interview scheduling, EquiHire introduced a combined strategy of **exploration policies** and **popularity discounting**. This intervention ensures that interview time slots are recommended more equitably, preventing already popular slots from becoming disproportionately dominant over time.
+
+#### Core Challenges Addressed
+- Popular morning slots (e.g., 9–11 AM) were increasingly recommended due to historical selection patterns.
+- Candidates with less scheduling flexibility—often correlated with caregiving or socioeconomic factors—were disproportionately pushed toward less desirable slots.
+- Without intervention, slot concentration rose from 60% → 74% over 24 weeks, indicating strong reinforcement bias.
+
+---
+
+#### How the Intervention Works
+
+#### 1. **Exploration Policy (ε-Greedy)**
+A small portion of recommendations (ε = 0.15) intentionally surfaces **underused time slots**.  
+These slots are selected using *inverse popularity weighting*, meaning the less exposure a slot has historically received, the more likely it is surfaced during exploration.
+
+**Purpose:**  
+- Prevent reinforcement of early popularity patterns  
+- Increase fairness for candidates with constrained availability  
+- Encourage a healthier distribution of scheduling options
+
+---
+
+#### 2. **Popularity Discounting**
+When not exploring, the system recommends slots based on candidate preferences but **penalizes overly popular time slots** using a logarithmic discount.
+
+This reduces the scoring advantage of high-exposure slots, helping to:
+- Reduce concentration around “prime time” slots  
+- Distribute interviews more evenly across the calendar  
+- Avoid structural favoritism toward candidates whose schedules align with historically favored times
+
+---
+
+#### Combined Effect
+
+The scheduler balances **exploration** (to broaden access) and **exploitation** (to respect genuine candidate preferences) while continuously updating slot exposure statistics.
+
+This intervention achieved:
+
+| Metric | Before | After | Target |
+|--------|--------|--------|--------|
+| Slot concentration (Gini) | 0.42 | 0.26 | <0.30 |
+| Preferred-slot disparity | 33% gap | 12% gap | <15% |
+| Candidate satisfaction | 7.8/10 | 7.6/10 | >7.0 |
+| Recruiter satisfaction | 8.1/10 | 7.9/10 | >7.5 |
+
+The approach successfully reduced fairness gaps while maintaining high user satisfaction.
+
 
 **A/B Test Results** (August 2024, 4 weeks):
 
@@ -778,7 +732,7 @@ class FairInterviewScheduler:
 **Challenge**: Inherited Bias from Pre-trained BERT
 
 **Assessment**:
-```markdown
+
 **Stereotype Test (BBQ Benchmark)**:
 Pre-trained BERT baseline: 62% accuracy (bias present)
 EquiHire's fine-tuned model (before fairness intervention): 59% accuracy
@@ -788,64 +742,50 @@ EquiHire's fine-tuned model (before fairness intervention): 59% accuracy
 "Team player" → 68% associated with female names
 
 **Conclusion**: BERT inherited gender stereotypes from pre-training corpus
-```
 
-**Intervention: Counterfactual Data Augmentation + Adversarial Head**
-```python
-def create_counterfactual_resumes(resumes, demographics):
-    """
-    Augment training data with counterfactuals
-    Swap gendered terms and demographically-associated names
-    """
-    augmented = []
-    
-    gendered_swaps = {
-        'he': 'she', 'his': 'her', 'him': 'her',
-        'man': 'woman', 'male': 'female',
-        'father': 'mother', 'son': 'daughter',
-        # ... comprehensive list
-    }
-    
-    name_swaps = {
-        # Swap names with different demographic associations
-        'John': ['Jamal', 'José', 'Wei'],
-        'Emily': ['Lakisha', 'María', 'Mei'],
-        # ... comprehensive list based on demographic research
-    }
-    
-    for resume, demo in zip(resumes, demographics):
-        # Original
-        augmented.append((resume, demo))
-    
-    # Counterfactual: swap gendered terms
-    cf_resume = resume
-    for old, new in gendered_swaps.items():
-        cf_resume = re.sub(rf'\b{old}\b', new, cf_resume, flags=re.IGNORECASE)
-    
-    # Swap name if present
-    for orig_name, alt_names in name_swaps.items():
-        if orig_name in resume:
-            cf_resume = cf_resume.replace(orig_name, random.choice(alt_names))
-            break
-    
-    # Flip demographic
-    cf_demo = flip_demographic(demo)
-    augmented.append((cf_resume, cf_demo))
 
-return augmented
+#### Intervention: Counterfactual Data Augmentation + Adversarial Head
 
-# Training: Original + Counterfactual data (2x size)
-# Plus adversarial fairness head (similar to Team C)
-```
+To address inherited bias from pre-trained language models (such as BERT), EquiHire combined **counterfactual data augmentation** with an **adversarial fairness head**. This two-part strategy aimed to reduce gender and demographic stereotypes embedded within resume text representations.
 
-**Results**:
+---
+
+**1. Counterfactual Data Augmentation**
+The team expanded the training dataset by creating **counterfactual versions** of resumes that systematically removed or reversed demographic cues. This included:
+
+- **Swapping gendered terms** (e.g., “he” → “she”, “father” → “mother”)  
+- **Replacing demographically associated names** with alternatives from different groups  
+- **Flipping demographic labels** to ensure the model learned that identical qualifications should produce identical predictions regardless of identity markers
+
+This augmentation doubled the effective training set size and reduced spurious correlations between demographic cues and predicted job suitability.
+
+---
+
+**2. Adversarial Fairness Head**  
+In addition to the main screening classifier, an adversarial network was added to detect protected attributes (e.g., gender) from the model’s internal representations.
+
+Using **gradient reversal**, the model was trained to:
+- Improve job-relevance predictions  
+- Simultaneously *decrease* its ability to encode demographic information  
+
+This ensures the representation space becomes *less correlated* with protected attributes, even when demographic proxies appear indirectly in language patterns.
+
+---
+
+**Impact on Model Performance**
 
 | Metric | Baseline | Post-Intervention | Target | Status |
 |--------|----------|-------------------|--------|--------|
 | BBQ stereotype accuracy | 59% | 53% | <55% | ✓ |
-| Gender association test | 73%/68% | 54%/56% | <60% | ✓ |
+| Gender association test | 73% / 68% | 54% / 56% | <60% | ✓ |
 | Resume screening accuracy | 89% | 87% | >85% | ✓ |
 | Gender gap (screening) | 9% | 2.1% | <5% | ✓ |
+
+---
+
+**Summary**
+The combined approach significantly reduced stereotype alignment and demographic predictability while preserving overall screening accuracy. This intervention was critical for mitigating biases inherited from large pre-trained language models and ensuring fairer resume screening outcomes.
+
 
 ---
 
@@ -855,7 +795,6 @@ return augmented
 
 **Applicable Regulations Mapped**:
 
-```markdown
 **EU**:
 - EU AI Act (High-Risk, Annex III - Employment)
 - GDPR Article 22 (Automated Decision-Making)
@@ -868,11 +807,11 @@ return augmented
 **Canada** (expansion planned 2025):
 - Directive on Automated Decision-Making
 - Algorithmic Impact Assessment required
-```
+
 
 **Layered Compliance Strategy**:
 
-```markdown
+
 **Common Core** (Highest Standard):
 
 1. **Bias Testing Frequency**:
@@ -911,7 +850,7 @@ return augmented
 **Canada-Specific**:
 - AIA questionnaire completion (Treasury Board template)
 - Public AIA summary publication
-```
+
 
 **Efficiency Gain**: Unified approach reduced compliance overhead by **43%** compared to separate jurisdiction-by-jurisdiction compliance (estimated based on time tracking).
 
@@ -919,93 +858,45 @@ return augmented
 
 #### Weeks 31-32: Evidence Automation
 
-**Automated Evidence Generation**:
 
-```yaml
-# .github/workflows/compliance-evidence.yml
-name: Weekly Compliance Evidence Generation
+### Automated Evidence Generation
 
-on:
-  schedule:
-    - cron: '0 2 * * 0'  # Every Sunday 2 AM
-  workflow_dispatch:
+To maintain continuous compliance and audit readiness, EquiHire implemented a fully automated evidence generation pipeline. This system runs on a weekly schedule and produces all required documentation for the EU AI Act, GDPR Article 22, EEOC 80% Rule, and NYC Local Law 144.
 
-jobs:
-  generate-evidence:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Generate Data Bias Audit
-        run: |
-          python scripts/generate_data_audit.py \
-            --systems all \
-            --output reports/data-bias-audit-$(date +%Y-%m-%d).pdf
-      
-      - name: Calculate Fairness Metrics
-        run: |
-          python scripts/calculate_fairness_metrics.py \
-            --period weekly \
-            --output reports/fairness-metrics-$(date +%Y-%m-%d).json
-      
-      - name: Generate 80% Rule Report (EEOC)
-        run: |
-          python scripts/calculate_disparate_impact.py \
-            --output reports/disparate-impact-$(date +%Y-%m-%d).pdf
-      
-      - name: Update Model Cards
-        run: |
-          python scripts/update_model_cards.py \
-            --systems all
-      
-      - name: Commit Evidence
-        run: |
-          git config user.name "Compliance Bot"
-          git config user.email "compliance@equihire.com"
-          git add reports/ model-cards/
-          git commit -m "Auto-generate compliance evidence $(date +%Y-%m-%d)"
-          git push
-      
-      - name: Notify Team
-        run: |
-          curl -X POST ${{ secrets.SLACK_WEBHOOK }} \
-            -H 'Content-Type: application/json' \
-            -d '{"text":"✅ Weekly compliance evidence generated"}'
-```
+### What the Automation Does
 
-**Evidence Repository Structure**:
+The pipeline automatically:
 
-```
-/compliance-evidence/
-  /EU-AI-Act/
-    /Article-9-Risk-Management/
-      risk-assessment-2024.pdf
-      mitigation-plan.md
-      FDR-risk-classification.md
-    /Article-10-Data-Governance/
-      data-bias-audit-2024-Q3.pdf
-      demographic-distribution-analysis.html
-      proxy-variables-documentation.md
-    /Article-11-Technical-Documentation/
-      system-architecture.md
-      training-methodology.pdf
-      model-cards/
-        candidate-ranking-v2.md
-        resume-screening-v3.md
-        interview-scheduling-v1.md
-  /GDPR/
-    /Article-22/
-      explanation-generation-protocol.md
-      appeal-process-documentation.md
-      human-review-logs-2024-Q3.csv
-  /US-EEOC/
-    disparate-impact-analysis-2024-Q3.pdf
-    80-percent-rule-calculations.xlsx
-  /NYC-Law-144/
-    independent-bias-audit-2024.pdf
-    public-summary.pdf
-  /Canada-AIA/
-    aia-questionnaire-completed.pdf
-    aia-public-summary.html
-```
+- Generates **data bias audits** for all systems  
+- Computes **weekly fairness metrics** across all demographic and intersectional groups  
+- Produces **disparate impact reports** aligned with the EEOC 80% rule  
+- Updates and version-controls all **model cards**  
+- Stores outputs in a centralized compliance evidence repository  
+- Notifies the Fairness, Legal, and Compliance teams when new evidence is generated
+
+### Why It Matters
+
+Before automation, assembling compliance documentation required:
+
+- 20+ hours/week of manual work  
+- 3–4 weeks to prepare for an audit  
+- High risk of errors or missing evidence  
+
+With automation:
+
+- Evidence preparation dropped to **2 days**  
+- Compliance is maintained **continuously**, not quarterly  
+- All artifacts remain **traceable, timestamped, and reproducible**  
+- Audit readiness became a **standard operating state**, not an annual project
+
+### Outcomes
+
+- **43% reduction** in overall compliance workload  
+- **90% reduction** in manual documentation effort  
+- **Zero compliance gaps** in external audit  
+- Reliable, consistent, regulator-grade evidence for all high-risk systems
+
+This automated pipeline became a foundational component of EquiHire’s governance model, ensuring that fairness and compliance remain sustainable as the organization scales.
 
 **Audit-Ready Status**: Time to compile compliance package reduced from estimated 3-4 weeks → **2 days** (automated evidence collection).
 
@@ -1015,7 +906,6 @@ jobs:
 
 **Internal Audit** (Week 33-34):
 
-```markdown
 **Compliance Checklist Review**:
 
 ✓ EU AI Act Article 9 (Risk Management): COMPLETE
@@ -1034,7 +924,7 @@ jobs:
 3. Documentation: Add more detail on human oversight training → Fixed
 
 **Outcome**: Audit-ready after minor fixes
-```
+
 
 **External Audit** (Week 35-36):
 
@@ -1047,7 +937,6 @@ Engaged: **Algorithmic Justice Consulting** (independent third-party auditor)
 
 **Audit Findings** (November 15, 2024):
 
-```markdown
 **AUDIT REPORT SUMMARY**
 
 **Overall Assessment**: PASS (with minor recommendations)
@@ -1091,7 +980,6 @@ Date: November 15, 2024
 - Updated processes documented
 - Re-confirmed compliance
 
----
 
 ### Stage 5: Monitoring & Governance Activation (December 2024, Weeks 37-44)
 
@@ -1101,7 +989,6 @@ Date: November 15, 2024
 
 **1. Executive Dashboard** (Monthly Review by CEO + Board):
 
-```markdown
 **EquiHire Fairness Health Score: 89/100** ✓ (Target: >85)
 
 **Trend** (vs. Previous Quarter):
@@ -1122,13 +1009,12 @@ Date: November 15, 2024
 **Investment vs. Benefit**:
 - Q4 fairness spend: $85K
 - Estimated benefit: $520K (prevented incidents + new contracts)
-```
 
 **2. Management Dashboard** (Weekly Review):
 
 Intersectional heatmap showing performance across demographics:
 
-```
+
 Intersectional Performance Matrix (Candidate Ranking Accuracy)
 
                 Male    Female  Non-Binary
@@ -1151,7 +1037,6 @@ Live metrics with automated alerts:
 
 **Alert System Configured**:
 
-```markdown
 **Tiered Alerts**:
 
 **Critical** (>10% from baseline):
@@ -1172,7 +1057,6 @@ Live metrics with automated alerts:
 - Notification: Team Fairness Champions
 - Response SLA: <1 week
 - Incidents: 3 (All resolved, no pattern)
-```
 
 ---
 
@@ -1180,7 +1064,6 @@ Live metrics with automated alerts:
 
 **AI Ethics Committee - First Quarterly Review** (December 10, 2024):
 
-```markdown
 **Agenda**:
 1. Review 9-month implementation progress
 2. System-by-system fairness performance
@@ -1210,7 +1093,6 @@ Live metrics with automated alerts:
 - Sarah Chen: Recruit 2-4 new Community Advisory Council members (Q1 2025)
 - Michael Rodriguez: Update technical guidelines for 3% accuracy threshold
 - Jennifer Liu: Coordinate expanded stakeholder engagement
-```
 
 **Working Groups Active**:
 - Recruitment AI Working Group: Bi-weekly meetings, 12 meetings held
@@ -1259,7 +1141,7 @@ Live metrics with automated alerts:
 
 **ROI Calculation**:
 
-```markdown
+ 
 **Investment** (12 months):
 - Personnel (3.5 FTE): $375K
 - Technology & tools: $75K
@@ -1278,7 +1160,6 @@ Live metrics with automated alerts:
 **ROI**: ($2.81M - $625K) / $625K = **349%**
 
 **Payback Period**: 4.5 months
-```
 
 ---
 
