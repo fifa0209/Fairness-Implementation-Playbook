@@ -819,9 +819,4 @@ Use this checklist in the post-mortem meeting:
 - External Fairness Consultant (if retainer): [Contact]
 - Crisis Communications Firm: [Contact]
 
----
 
-*Last updated: 2024-12-15*  
-*Version: 2.0 - Enhanced for rapid response*  
-*Owner: Chief AI Ethics Officer*  
-*Next review: Quarterly or post-incident*
